@@ -1,5 +1,5 @@
 package main
 
 main :: proc () {
-    day1()
+    day1_part2()
 }
