@@ -1,8 +1,7 @@
-package main
+package day1
 
 import "core:fmt"
 import "core:strconv"
-import "core:os"
 import "core:strings"
 
 get_digits_from_line :: proc(line: string) -> [dynamic]int {
@@ -18,15 +17,8 @@ get_digits_from_line :: proc(line: string) -> [dynamic]int {
     return digits
 }
 
-day1 :: proc() {
-    data, ok := os.read_entire_file("input.txt")
-    defer delete(data)
-    
-    if !ok {
-        fmt.println("Failed to read file")
-    }
-
-    lines, _ := strings.split_lines(string(data))
+day1 :: proc(data: string) {
+    lines, _ := strings.split_lines(data)
     defer delete(lines)
     
     total : int = 0
