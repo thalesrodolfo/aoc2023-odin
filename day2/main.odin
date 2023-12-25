@@ -11,5 +11,5 @@ main :: proc () {
         fmt.println("Failed to read file")
     }
 
-    part1(string(data))
+    part2(string(data))
 }
